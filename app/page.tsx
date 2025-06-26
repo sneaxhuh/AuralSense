@@ -115,7 +115,7 @@ export default function AuralSense() {
 
     try {
       const formData = new FormData()
-      formData.append("audio", file)
+      formData.append("audio_file", file)
 
                   const response = await fetch("/api/predict", {
         method: "POST",
