@@ -4,6 +4,7 @@ export async function POST(request: NextRequest) {
   const formData = await request.formData();
 
   const backendUrl = process.env.PYTHON_BACKEND_URL || 'http://localhost:8000'; // Replace with your Render backend URL
+  console.log('Backend URL being used:', backendUrl);
 
   try {
     const response = await fetch(`${backendUrl}/predict/`, {
